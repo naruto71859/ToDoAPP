@@ -9,7 +9,7 @@ export default class List extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <div>
         <div className="task row m-3">
           <button className="toggler btn btn-warning mx-2"
                 onClick={ () => this.setState({toggler:false})}
@@ -31,7 +31,7 @@ export default class List extends Component {
                 style={this.textDecoration() }
           > {this.props.Text} </h4>
         </div>
-      </React.Fragment>
+      </div>
     );
   }
 

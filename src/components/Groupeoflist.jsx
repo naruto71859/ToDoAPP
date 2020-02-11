@@ -24,14 +24,15 @@ export default class Groupeoflist extends Component {
     }
     else {this.setState({isempty:true})}
   };
-
+      /* ou bien eon peut ecrire comme ce la    setState({ Task:  [...this.state.Task , {id:x , value:t}]  }) */
 
 
 
   handelDelete = x => {
     const tab = this.state.Task.filter(
       // eliminate the element clicked
-      el => el.id !== x
+      el => el.id !== x     // this el.id peut etre remplace par index of this function filter (el,index)
+                                  //and x peut etre remplacer par i of the function map  en dessous
     );
     this.setState({ Task: tab });
   };
